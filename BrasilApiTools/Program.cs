@@ -6,25 +6,25 @@ namespace BrasilApiTools.Tools
 {
     internal class Program
     {
-        private static async Task Main(string[] args)
+       private static async Task Main(string[] args)
         {
             Dictionary<string, Func<Task>> apiOptions = new Dictionary<string, Func<Task>>
             {
                 { "1", DisplayTermsOfUse },
-                { "2", Banks.GetBankInfo },
+                { "2", banksList.GetBanksInfo },
                 { "3", cepV1.GetCepInfo },
                 { "4", CepV2.GetCepInfo },
                 { "5", cnpj.GetCnpjInfo },
                 { "6", corretoras.GetCorretorasInfo },
                 { "7", DDD.GetDDDInfo },
                 { "8", feriados.GetFeriadosInfo },
-                { "9", DisplayNotImplemented },
+                { "9",  Fipe.GetFipeInfo },
                 { "10", DisplayNotImplemented },
-                { "11", DisplayNotImplemented },
+                { "11", ISBN.GetBookInfo },
                 { "12", DisplayNotImplemented },
-                { "13", DisplayNotImplemented },
-                { "14", DisplayNotImplemented },
-                { "15", DisplayNotImplemented },
+                { "13", pix.GetPixInfo },
+                { "14", domain.GetDomainInfo },
+                { "15", taxa.GetTaxaInfo },
             };
 
             while (true)
