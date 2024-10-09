@@ -44,15 +44,15 @@ namespace BrasilApiTools.Tools
                         //Console.WriteLine(jsonResponse);
 
                         // Desserializa a string JSON em um objeto C#
-                        var banksInfo = JsonSerializer.Deserialize<BankResponse>(jsonResponse);
+                        var bankInfo = JsonSerializer.Deserialize<BankResponse>(jsonResponse);
 
-                        if (banksInfo != null)
+                        if (bankInfo != null)
                         {
                             // Exibe as informações do banco
-                            Console.WriteLine($"Código: {banksInfo.Code}");
-                            Console.WriteLine($"ISPB: {banksInfo.Ispb}");
-                            Console.WriteLine($"Nome: {banksInfo.Name}");
-                            Console.WriteLine($"Nome Completo: {banksInfo.FullName}");
+                            Console.WriteLine($"Código: {bankInfo.Code}");
+                            Console.WriteLine($"ISPB: {bankInfo.Ispb}");
+                            Console.WriteLine($"Nome: {bankInfo.Name}");
+                            Console.WriteLine($"Nome Completo: {bankInfo.FullName}");
                         }
                         else
                         {
